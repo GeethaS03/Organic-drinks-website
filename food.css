@@ -1,0 +1,268 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family:  'Sofia';
+}
+.container{
+    width: 100%;  
+    height: 100vh;
+    overflow-x: hidden;
+    background-image: url("option.jpg");
+    background-size: cover;
+
+}
+nav{
+    width: 100%;
+    height: 70px;
+    background-color:rgba(0, 0, 0, 0.8);
+    align-items: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+}
+nav ul{
+    padding: 25px;
+}
+nav ul li{
+    display: inline-block;
+    margin: 20px;
+}
+nav ul li a{
+    color: black;
+    padding: 10px 15px;
+    
+}
+nav ul li a:hover{
+    background-color: lightseagreen;
+    color: white;
+    border-radius: 5px;    
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+}
+.fa-bars{ color:white;
+    display: none!important;
+    font-size: 20px;
+}
+.logo{
+    width: 25%;
+    /* height: 10px; */
+}
+nav img{
+    width: 19%;
+    border-radius: 50%;
+}
+nav span{
+    width: 30%;
+    font-size: 40px;
+    color:lightcoral;
+    position: absolute;
+    top: 20%;
+}
+input:checked~.sub-nav{
+    left: 0%;
+}
+#check{
+    display: none;
+}
+.sub-nav a{
+    padding: 10px;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+/*===================home cont===============================*/
+.cont{
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    padding: 0 20% 0 20%;
+    animation-name: letter;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+}
+@keyframes letter {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1.1);
+    }
+    
+}
+.text h1{
+    color: cyan;
+    font-size: 30px;
+    padding: 0px;
+}
+.text p{
+    color:#06f041;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0px 0px 15px 0px;
+}
+.text button{
+    width: 130px;
+    padding: 13px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    transition: all 1s;
+}
+.text button:hover{
+    background-color: #FF9800;
+    transform: translatex(25%);
+}
+
+
+
+/*========================about=======================*/
+.div1{
+    width: 100%;
+    background-color:black;
+    font-size: 40px;
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+ h2{
+    color: rgb(28, 173, 28);
+}
+/* ------ box-container div ------- */
+.box-container{
+    /* background-color:thistle; */
+    display: grid;
+    min-height: 600px;
+    grid-template-columns:auto auto auto auto;
+    gap:20px; 
+    padding: 20px;
+}
+/* ------------boxes div------------ */
+.box-container .boxes{
+    box-shadow: 0 5px 10px rgba(0, 0, 0,0.2); 
+    border-radius: 5px;height: 300px;
+    /* width: 50%; */
+    line-height: 25px; 
+    position:relative;
+    transition: 0.3s;
+}
+.images{
+    display: block; 
+    width:100%; 
+    height: 100%; 
+    border-radius: 5px;
+}
+.overlay{
+        position: absolute;
+        bottom: 0; 
+        left: 0; 
+        right: 0;
+        background-color: rgba(0, 0, 0,0.75); 
+        overflow: hidden; 
+        width: 100%; 
+        height: 0;
+       transition: all 0.5s ; 
+       border-radius: 5px;
+}
+.overlay h2{ 
+    text-align: left; 
+    color:aqua;
+    padding: 20px 0 15px 20px; 
+    font-size:27px; 
+}
+.overlay button{ 
+    background-color: 
+    black; color: white !important; 
+    border:1px solid white; 
+    border-radius:5px;
+    width:100px;
+    height: 30px; 
+    margin:0 0 0 20px; 
+    font-size: 14px; 
+    font-weight: 500;
+}
+.boxes:hover .overlay{
+    height:100%; 
+
+} 
+/*========================Nav bar responsive=========================*/
+
+@media only screen and (max-width:500px) {
+    .fa-bars{
+        display: block!important;
+    }
+    nav{
+        z-index: 3;
+       }
+    .sub-nav{
+        position: fixed;
+        background-color:rgba(224, 13, 13, 0.8);
+        top: 73px;
+        transition: all 1s;
+        left: 100%;
+        width: 100%;
+        display: block;
+    }
+    nav img{
+            width: 39%;
+            border-radius: 50%;
+        }
+    .sub-nav ul li{
+        display:flex; 
+        flex-direction: column;
+    }
+    .logo span{
+        width: 100%;
+        font-size: 25px;
+    }
+    .cont h1{
+        width: 100%;
+        font-size: 20px;
+        
+    }
+}
+@media only screen and (min-width:500px) and (max-width:850px) {
+    .fa-bars{
+        display: block!important;
+    }
+    .sub-nav ul li{
+        display:flex; 
+        flex-direction: column; 
+    }
+
+    nav{
+        z-index: 3; 
+       }
+    .sub-nav{
+        position: fixed;
+        background-color:rgba(242, 29, 29, 0.8);
+        top: 17%;
+        transition: all 1s;
+        left: 100%;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 50px;
+    }
+    nav img{
+        width: 29%;
+        border-radius: 50%;
+    }
+    .logo span{
+        width: 100%;
+        font-size: 25px;
+    }
+}

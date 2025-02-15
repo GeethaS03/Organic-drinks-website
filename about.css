@@ -1,0 +1,338 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family:  'Sofia';
+}
+.container{
+    width: 100%;  
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* background-image: url("option.jpg"); */
+    background-size: cover;
+
+}
+nav{
+    width: 100%;
+    height: 70px;
+    background-color:rgba(0, 0, 0, 0.8);
+    align-items: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+}
+nav ul{
+    padding: 25px;
+}
+nav ul li{
+    display: inline-block;
+    margin: 20px;
+}
+nav ul li a{
+    color: black;
+    padding: 10px 15px;
+    
+}
+nav ul li a:hover{
+    background-color: lightseagreen;
+    color: white;
+    border-radius: 5px;    
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+}
+.fa-bars{ color:white;
+    display: none!important;
+    font-size: 20px;
+}
+.logo{
+    width: 25%;
+    /* height: 10px; */
+}
+nav img{
+    width: 19%;
+    border-radius: 50%;
+}
+nav span{
+    width: 30%;
+    font-size: 40px;
+    color:lightcoral;
+    position: absolute;
+    top: 20%;
+}
+input:checked~.sub-nav{
+    left: 0%;
+}
+#check{
+    display: none;
+}
+.sub-nav a{
+    padding: 10px;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/*====================About======================*/
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 47px;
+    margin: auto;
+    /* padding-top: 50%; */
+   box-shadow: 10px 10px 5px 5px #ffffff;
+    box-shadow: 10px 10px 10px -4px #aaaaaaaa,-10px -10px 24px #ffffff;
+    /* height: 450px; */
+    width: 800px;
+    position: relative;
+    
+}
+.slide{
+    position: absolute;
+    top: 15%;
+    left: 0;
+    height: 80%;
+    width: 50%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    animation-name: slide;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+}
+@keyframes slide{
+    0%{background-image: url('sangu\ poo.webp');}
+    25%{background-image: url('lotus.webp');}
+    50%{background-image: url('Pumpkinshake.jpg');}
+    75%{background-image: url('semparuthi.jpg');}
+    100%{background-image: url('vethala.jpg');}
+}
+.about-cont{
+    margin:  35px;
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    width: 50%;
+    padding: 20px;
+}
+.about-cont span{
+    color: chocolate;
+}
+.about-cont h2{
+    font-family: "potta one";
+    font-weight: 100;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.about-cont p{
+    color: gray;
+    font-size: 23px;
+}
+/* .image img{
+    height: 250px;
+    width: 250px; 
+    left: 40%;
+    border-radius: 50%;
+    animation: rotate 10s linear infinite;
+    animation-delay: 1s;
+} */
+footer{
+    width: 100%;
+    padding: 5%;
+    display: grid; 
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));  */
+    grid-template-columns:auto auto auto auto auto;
+    justify-content: center; 
+    gap:150px ;
+    background-color:green;
+    margin-top: 30px;
+}
+.box ul{
+    list-style: none;
+    padding: 10px;
+    line-height: 30px;
+}
+/* / */
+footer h1{
+    color:rgb(207, 134, 110);
+}
+.fa-facebook-f{
+    color: blue;
+}
+.fa-twitter{
+    color:skyblue;
+}
+.fa-instagram{
+    color: deeppink;
+}
+.fa-linkedin-in{
+    color:navy;
+}
+@media only screen and (max-width:500px) {
+    .fa-bars{
+        display: block!important;
+    }
+    nav{
+        height: 100px;
+        z-index: 3;
+       }
+    .sub-nav{
+        position: fixed;
+        background-color:rgba(224, 13, 13, 0.8);
+        top: 73px;
+        transition: all 1s;
+        text-align: center;
+        left: 100%;
+        width: 100%;
+        display: block;
+        font-size: 25px;
+    }
+    nav img{
+            width: 39%;
+            border-radius: 50%;
+        }
+    .sub-nav ul li{
+        display:flex; 
+        flex-direction: column;
+    }
+    .logo span{
+        /* width: 100%; */
+        font-size: 35px;
+    }
+   
+    .slide{
+        width: 130%;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    /* .about-cont{
+            margin-top: 60%;
+            width: 100%;
+            left: 150px;
+            color: black;
+            text-align: center;
+            flex-direction: column-reverse;
+    } */
+    footer{
+        width: 300%;
+        grid-template-columns: auto;
+        margin-top: 180%;
+        font-size: 40px;
+        background-color: transparent;
+    }
+    span{
+        font-size: 55px;
+        text-align: center;
+    }
+     .about-cont h2{
+        font-size: 35px;
+        text-align: center;
+        color: black;
+    } 
+    .about-cont p{
+        color: rgb(16, 20, 16);
+        font-size: 60px;   
+        text-align: center;   
+        margin-top: 150%;  
+    } 
+    .box h1{
+        text-align: center;
+    }
+   .box ul{
+    font-size: 55px;
+  line-height: 100%;
+  text-align: center;
+   }
+   .icon{
+    text-align: center;
+    font-size: 45px;
+   }
+
+    
+}
+@media only screen and (min-width:500px) and (max-width:900px) {
+ 
+    nav{
+        z-index: 3;
+       }
+       .fa-bars{
+        display: block!important;
+    }
+    .sub-nav ul li{
+        display:flex; 
+        flex-direction: column; 
+    }
+    
+    .sub-nav{
+        position: fixed;
+        background-color:rgba(255, 0, 179, 0.945);
+        top: 17%;
+        transition: all 2s;
+        left: 100%;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 50px;
+    }
+    aside{
+        display:block ;
+    }
+    .slide{
+        width: 130%;
+    }
+    .about-cont{
+            margin-top: 60%;
+            width: 100%;
+            left: 150px;
+            color: black;
+            text-align: center;
+    }
+    footer{
+        width: 300%;
+        grid-template-columns: auto;
+        margin-top: 180%;
+        font-size: 40px;
+        background-color: transparent;
+    }
+    span{
+        font-size: 55px;
+        text-align: center;
+    }
+    .about-cont h2{
+        font-size: 35px;
+        text-align: center;
+    }
+    .about-cont p{
+        color: rgb(35, 150, 15);
+        font-size: 40px;   
+        text-align: center;     
+    }
+    .box h1{
+        text-align: center;
+    }
+   .box ul{
+    font-size: 55px;
+  line-height: 100%;
+  text-align: center;
+   }
+   .icon{
+    text-align: center;
+    font-size: 45px;
+   }
+    
+}
